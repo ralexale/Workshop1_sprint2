@@ -1,0 +1,18 @@
+.card__contaier {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  .main__article {
+    position: relative;
+    //   display: flex;
+    //   flex-wrap: wrap;
+    h3 {
+      position: absolute;
+      color: #fff;
+      top: 80%;
+      left: 10%;
+    }
+  }
+}
