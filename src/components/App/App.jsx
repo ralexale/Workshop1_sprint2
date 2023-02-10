@@ -1,9 +1,14 @@
 import React from 'react';
+import Header from './Header/Header';
+import Galery from './galery/Galery';
+import Footer from './Footer/Footer';
 
 const App = () => {
   return (
     <>
-      <h1>Hola react 2</h1>
+      <Header />
+      <Galery />
+      <Footer />
     </>
   );
 };
