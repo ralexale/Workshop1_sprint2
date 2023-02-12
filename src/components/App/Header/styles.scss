@@ -1,0 +1,39 @@
+ .Container {
+   width: 100%;
+   height: 80vh;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-image: url(../assets/img/desktop/image-hero.jpg);
+   color: white;
+ }
+
+   .links {
+     color: white;
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+
+     a {
+       color: white;
+       align-items: center;
+       justify-content: space-evenly;
+       flex-direction: column;
+       margin-right: 30px;
+       font-size: 18px;
+
+     }
+   }
+ 
+
+ .text {
+   color: white;
+   width: 700px;
+   padding: 50px;
+   border-style: none;
+   border: 2px solid white;
+   font-weight: 300;
+   font-size: 70px;
+   letter-spacing: 5px;
+   margin-top: 13%;
+   margin-left: 17%;
+ }
