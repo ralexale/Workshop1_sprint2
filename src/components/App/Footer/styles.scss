@@ -14,6 +14,9 @@
 .subray{
     text-decoration: none;
 }
+.subray:hover{
+    border-bottom: 2px solid white;
+}
 
 .footer-container{
     color: white;
@@ -71,3 +74,5 @@
         }
     }
 }
+
+
