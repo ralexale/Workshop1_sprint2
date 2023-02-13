@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './styles.scss';
 
 //DESKTOP IMAGE
@@ -21,9 +21,14 @@ import imgMobile6 from '../assets/img/mobile/image-pocket-borealis.jpg';
 import imgMobile7 from '../assets/img/mobile/image-curiosity.jpg';
 import imgMobile8 from '../assets/img/mobile/image-fisheye.jpg';
 
-const Galery = () => {
-  const [responsive, setResponsive] = useState(false);
+//vr image
 
+import imgVr from '../assets/img/desktop/image-interactive.jpg';
+import imgVrmobile from '../assets/img/mobile/image-interactive.jpg';
+const vrImgDesktop = imgVr;
+const vrmobile = imgVrmobile;
+
+const Galery = () => {
   const arrayCard = [
     {
       image: img1,
@@ -93,24 +98,60 @@ const Galery = () => {
       title: 'MAKE IT FISHEYE',
     },
   ];
-
   return (
     <>
-      <div>
-        <h2>OUR CREATIONS</h2>
-        <button>SEE ALL</button>
-      </div>
+      <section className="galery__container">
+        <div class="vrContainer" id="vrContainer">
+          <figure className="galery__vrimg">
+            <img className="vrimg__desktop" src={vrImgDesktop} alt="vrImg" />
+            <img className="vrimg__mobile" src={vrmobile} alt="vrImg" />
+          </figure>
+          <div class="leader">
+            <h2>
+              THE LEADER IN <br />
+              INTERACTIVE VR
+            </h2>
+            <p>
+              Founded in 2011,Loopstudios has been prducing world-class virutal
+              reality projects for some of the best companies around the globle.
+              Our award-winnig creations have transformed businesses through
+              digital experiences that bind to their band
+            </p>
+          </div>
+        </div>
 
-      <div className="card__contaier">
-        {arrayCard.map((item, index) => (
-          <article className="main__article" key={index}>
-            <h3>{item.title}</h3>
-            <figure>
-              <img src={item.image} alt={item.title} />
-            </figure>
-          </article>
-        ))}
-      </div>
+        <article className="title__galery">
+          <h2>OUR CREATIONS</h2>
+          <button>SEE ALL</button>
+        </article>
+
+        <div className="card__container">
+          {arrayCard.map((item, index) => (
+            <article className="main__article" key={index}>
+              <figure>
+                <img src={item.image} alt={item.title} />
+                <div className="img__gradient"></div>
+                <h3>{item.title}</h3>
+              </figure>
+            </article>
+          ))}
+        </div>
+
+        <div className="cardmobile__container">
+          {arrayMobile.map((item, index) => (
+            <article className="main__article" key={index}>
+              <figure>
+                <img className="img" src={item.image} alt={item.title} />
+                <div className="img__gradient"></div>
+                <h3>{item.title}</h3>
+              </figure>
+            </article>
+          ))}
+        </div>
+        <article className="btn__mobile">
+          <button>SEE ALL</button>
+        </article>
+      </section>
     </>
   );
 };

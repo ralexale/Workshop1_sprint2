@@ -1,4 +1,36 @@
-.card__contaier {
+@use 'src/variables' as v;
+@use 'vr';
+@use 'mixins';
+
+.galery__container {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title__galery {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-bottom: 20px;
+  h2 {
+    font-weight: 500;
+    font-size: 36px;
+  }
+  button {
+    @include mixins.button;
+  }
+  button:hover {
+    background-color: black;
+    color: white;
+  }
+}
+
+.card__container {
+  width: 80%;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -6,13 +38,148 @@
   flex-wrap: wrap;
   .main__article {
     position: relative;
-    //   display: flex;
-    //   flex-wrap: wrap;
+    figure {
+      .img__gradient {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 99.2%;
+        background: linear-gradient(
+          60deg,
+          rgba(0, 0, 0, 0.651),
+          rgba(0, 0, 0, 0)
+        );
+      }
+      h3 {
+        width: 160px;
+        font-weight: 200;
+        font-family: v.$fontJosefin;
+        font-size: 30px;
+        position: absolute;
+        color: #fff;
+        top: 79%;
+        left: 20%;
+      }
+    }
+  }
+  figure:hover {
+    cursor: pointer;
+    .img__gradient {
+      background: linear-gradient(#ffffff93, #ffffff93);
+    }
     h3 {
-      position: absolute;
-      color: #fff;
-      top: 80%;
-      left: 10%;
+      color: black;
+    }
+  }
+}
+
+.cardmobile__container {
+  display: none;
+}
+.btn__mobile {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .title__galery {
+    justify-content: center;
+    h2 {
+      font-size: 40px;
+    }
+    button {
+      display: none;
+    }
+  }
+  .btn__mobile {
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 200px;
+    width: 100%;
+    button {
+      @include mixins.button;
+      width: 300px;
+      height: 60px;
+      font-size: 20px;
+      padding: 0;
+    }
+    button:hover {
+      background-color: black;
+      color: white;
+    }
+  }
+
+  .card__container {
+    display: none;
+  }
+
+  .cardmobile__container {
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    .main__article {
+      position: relative;
+
+      figure {
+        .img {
+          height: 100%;
+          width: 100%;
+        }
+        .img__gradient {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 99.2%;
+          background: linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.651),
+            rgba(0, 0, 0, 0)
+          );
+        }
+        h3 {
+          width: 230px;
+          font-weight: 200;
+          font-family: v.$fontJosefin;
+          font-size: 40px;
+          position: absolute;
+          color: #fff;
+          top: 40%;
+          left: 5%;
+        }
+      }
+      figure:hover {
+        cursor: pointer;
+        .img__gradient {
+          background: linear-gradient(#ffffff93, #ffffff93);
+        }
+        h3 {
+          color: black;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 456px) {
+    .title__galery {
+      justify-content: center;
+      h2 {
+        font-size: 35px;
+      }
+    }
+
+    .cardmobile__container {
+      .main__article {
+        figure {
+          h3 {
+            font-size: 30px;
+            width: 150px;
+          }
+        }
+      }
     }
   }
 }

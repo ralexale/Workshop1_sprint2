@@ -1,39 +1,161 @@
- .Container {
-   width: 100%;
-   height: 80vh;
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-image: url(../assets/img/desktop/image-hero.jpg);
-   color: white;
- }
+.Container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+      rgba(17, 17, 17, 0.438),
+      rgba(17, 17, 17, 0.438)
+    ),
+    url(../assets/img/desktop/image-hero.jpg);
+  color: white;
+}
+.nav__container {
+  position: relative;
+  width: 80%;
+  height: 70%;
+  .links {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .menu__nav {
+    display: none;
+  }
+  .navContainer {
+    width: 100%;
+    height: 80px;
 
-   .links {
-     color: white;
-     display: flex;
-     align-items: center;
-     justify-content: space-around;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .links__navs {
+      a {
+        font-weight: 700;
+        text-decoration: none;
+        border: none;
+        color: white;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        margin-right: 30px;
+        font-size: 18px;
+      }
+      a:hover {
+        border-bottom: 2px solid white;
+      }
+    }
+  }
 
-     a {
-       color: white;
-       align-items: center;
-       justify-content: space-evenly;
-       flex-direction: column;
-       margin-right: 30px;
-       font-size: 18px;
+  .text__container {
+    text-align: justify;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 648px;
+    font-size: 60px;
+    .text {
+      box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.8);
+      font-weight: 100;
+      padding: 20px;
+      border: 2px solid white;
+    }
+  }
+}
 
-     }
-   }
- 
+.menu__mobile {
+  display: none;
+}
 
- .text {
-   color: white;
-   width: 700px;
-   padding: 50px;
-   border-style: none;
-   border: 2px solid white;
-   font-weight: 300;
-   font-size: 70px;
-   letter-spacing: 5px;
-   margin-top: 13%;
-   margin-left: 17%;
- }
+@media (max-width: 800px) {
+  .Container {
+    padding: 40px 0 0 0;
+    background-image: linear-gradient(
+        rgba(17, 17, 17, 0.226),
+        rgba(17, 17, 17, 0.253)
+      ),
+      url(../assets/img/mobile/image-hero.jpg);}
+  .menu__mobile {
+    gap: 30px;
+    padding: 100px;
+    background-color: black;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    .slide__header {
+      margin-bottom: 180px;
+      display: flex;
+      justify-content: space-between;
+    }
+    a {
+      width: 28%;
+
+      font-size: 42px;
+      text-decoration: none;
+      color: white;
+    }
+    a:hover {
+      border-bottom: 2px solid white;
+    }
+  }
+  .Container {
+    .nav__container {
+      width: 80%;
+
+      .links__navs {
+        display: none;
+      }
+    }
+    .text__container {
+      font-size: 50px;
+      position: absolute;
+      width: 100%;
+    }
+
+    .menu__nav {
+      height: 30%;
+      display: block;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .menu__mobile{
+    padding: 30px 30px;
+    .slide__header{
+      margin-bottom: 100px;
+    }
+  }
+  .Container {
+    padding: 40px 0 0 0;
+    background-image: linear-gradient(
+        rgba(17, 17, 17, 0.226),
+        rgba(17, 17, 17, 0.253)
+      ),
+      url(../assets/img/mobile/image-hero.jpg);
+    .nav__container {
+      width: 90%;
+      height: 60%;
+      .text__container {
+        font-size: 30px;
+        position: absolute;
+        width: 100%;
+      }
+      .menu__nav {
+        height: 30%;
+        display: block;
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none !important;
+}

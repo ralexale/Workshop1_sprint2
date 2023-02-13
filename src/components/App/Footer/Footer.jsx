@@ -14,14 +14,14 @@ const Footer = () => {
         <section className='footer-container sec1'>
             <div className="footer-container__incons-div">
                     <figure className='footer-container__enterprise-logo'><img src={enterpriseLogo} alt="" /></figure>
-                <div class="footer-container__media-icons">
+                <div className="footer-container__media-icons">
                         <figure className="footer-container__face"><img src={mediaIcon1} alt="" /></figure>
                         <figure className="footer-container__twiter"><img src={mediaIcon2} alt="" /></figure>
                         <figure className="footer-container__pinterest"><img src={mediaIcon3} alt="" /></figure>
                         <figure className="footer-container__instagram"><img src={mediaIcon4} alt="" /></figure>
                 </div>
             </div>
-            <div class="footer-container__div-list">
+            <div className="footer-container__div-list">
                 <ul>
                     <li><a href="#about" className='subray'>About</a></li>
                     <li><a href="#about" className='subray'>Careers</a></li>
@@ -37,7 +37,7 @@ const Footer = () => {
                     <figure className='footer-container__enterprise-logo'><img src={enterpriseLogo} alt="" /></figure>
                 
             </div>
-            <div class="footer-container__div-list">
+            <div className="footer-container__div-list">
                 <ul>
                     <li><a href="#about" className='subray'>About</a></li>
                     <li><a href="#about" className='subray'>Careers</a></li>
@@ -45,7 +45,7 @@ const Footer = () => {
                     <li><a href="#products" className='subray'>Products</a></li>
                     <li><a href="#suport" className='subray'>Support</a></li>
                 </ul>
-                <div class="footer-container__media-icons">
+                <div className="footer-container__media-icons">
                         <figure className="footer-container__face"><img src={mediaIcon1} alt="" /></figure>
                         <figure className="footer-container__twiter"><img src={mediaIcon2} alt="" /></figure>
                         <figure className="footer-container__pinterest"><img src={mediaIcon3} alt="" /></figure>

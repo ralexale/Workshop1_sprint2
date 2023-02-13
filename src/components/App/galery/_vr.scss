@@ -1,0 +1,136 @@
+@use 'src/variables';
+
+.vrContainer {
+  align-items: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 640px;
+
+  .galery__vrimg {
+    position: absolute;
+    left: 0;
+    .vrimg__desktop {
+      width: 100%;
+    }
+    .vrimg__mobile {
+      display: none;
+    }
+    .vrimg__mobile2 {
+      display: none;
+    }
+  }
+  .leader {
+    bottom: 0;
+    right: 0;
+    background-color: variables.$White;
+    text-align: center;
+    padding: 40px;
+    height: 360px;
+    width: 600px;
+    position: absolute;
+    z-index: 1;
+    h2 {
+      font-size: 42px;
+      margin: 30px;
+    }
+    p {
+      font-weight: 600;
+      color: variables.$VeryDarkGray;
+      text-align: justify;
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .vrContainer {
+    margin-bottom: 10px;
+    display: block;
+    height: 1120px;
+    width: 90%;
+    .galery__vrimg {
+      height: 457px;
+      width: 100%;
+      object-fit: fill;
+      position: none;
+      .vrimg__desktop {
+        display: none;
+      }
+      .vrimg__mobile {
+        object-fit: fill;
+        object-position: center;
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+    .leader {
+      height: 700px;
+      align-items: start;
+      z-index: none;
+      position: none;
+      width: 100%;
+      h2 {
+        font-size: 42px;
+        margin: 30px;
+      }
+      p {
+        letter-spacing: 1px;
+        text-align: center;
+        font-size: 30px;
+      }
+    }
+  }
+}
+@media (max-width: 426px) {
+  .vrContainer {
+    display: block;
+    height: 800px;
+    width: 90%;
+    .galery__vrimg {
+      .vrimg__mobile {
+        height: 60%;
+      }
+    }
+
+    .leader {
+      height: 530px;
+      padding: 10px;
+      h2 {
+        font-size: 30px;
+      }
+      p {
+        height: 300px;
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+// @media (max-width: 375px) {
+//   .vrContainer {
+//     height: 750px;
+//     .galery__vrimg {
+//       .vrimg__mobile {
+//         height: 50%;
+//       }
+//     }
+
+//     .leader {
+//       height: 70%;
+//       padding: 20px;
+//       h2 {
+//         font-size: 28px;
+//         margin: 30px;
+//       }
+//       p {
+//         font-weight: 600;
+//         color: variables.$VeryDarkGray;
+//         text-align: justify;
+//         font-size: 30px;
+//       }
+//     }
+//   }
+// }
